@@ -184,7 +184,8 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .work-gallery .carousel-slide {aspect-ratio:auto;grid-template-rows:auto auto;}
 .work-gallery .carousel-slide img {height:auto;object-fit:contain;}
 @media(max-width:800px){.hero-feature{padding:0 24px 36px;max-width:440px;}.work-gallery{padding-top:36px;padding-bottom:36px;}}
-#message-review { margin-top: 24px; }
+.form-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.enquiry-card .button:disabled { opacity: .65; cursor: wait; }
 
 .facebook-mark { display: inline-flex; flex: 0 0 auto; align-items: flex-end; justify-content: center; width: 23px; height: 23px; overflow: hidden; border-radius: 50%; background: #1877f2; color: #fff; font: bold 26px/1 Arial, sans-serif; letter-spacing: 0; }
 .nav-links .facebook-nav, .facebook-inline { gap: 8px; }
@@ -237,7 +238,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
   </div>
 </section>
 <section id="about" class="section wrap" aria-labelledby="about-title"><div class="section-head"><div class="eyebrow">Meet your braider</div><h2 id="about-title">Braiding with a personal touch.</h2><p>We create braids for women and girls in Newmarket and surrounding areas. Share a style you love or ask for help choosing your look. You’ll agree the style, extensions and appointment details together before booking.</p></div></section>
-<section id="experience" class="section experience" aria-labelledby="experience-title"><div class="experience-grid wrap"><div class="experience-copy"><div class="eyebrow">How to book</div><h2 id="experience-title">A style starts with an idea.</h2><p>Tell us what you have in mind. We’ll discuss the options and quote before you agree on an appointment.</p></div><div class="steps"><div class="step"><strong>Share your idea</strong><p>Prepare your enquiry, then send it to us on Facebook. Attach a style photo there if you have one.</p></div><div class="step"><strong>Agree the details</strong><p>Discuss the price, location, time needed and extensions.</p></div><div class="step"><strong>Get ready</strong><p>Once we confirm your appointment, have your hair washed, detangled and blow-dried before it begins.</p></div></div></div></section>
+<section id="experience" class="section experience" aria-labelledby="experience-title"><div class="experience-grid wrap"><div class="experience-copy"><div class="eyebrow">How to book</div><h2 id="experience-title">A style starts with an idea.</h2><p>Tell us what you have in mind. We’ll discuss the options and quote before you agree on an appointment.</p></div><div class="steps"><div class="step"><strong>Share your idea</strong><p>Send your enquiry using the form below. You can include a style photo to help us understand your look.</p></div><div class="step"><strong>Agree the details</strong><p>Discuss the price, location, time needed and extensions.</p></div><div class="step"><strong>Get ready</strong><p>Once we confirm your appointment, have your hair washed, detangled and blow-dried before it begins.</p></div></div></div></section>
     <section id="area" class="section area" aria-labelledby="area-title"><div class="area-grid wrap">
       <div><div class="eyebrow">A little closer to you</div><h2 id="area-title">Newmarket &amp; beyond.</h2><p>Based in Newmarket, with enquiries welcome from the surrounding 20–25 miles. Share your town or village so we can discuss the appointment location with you.</p></div>
       <div class="area-details"><p>Farther away? You are welcome to enquire. Agree the location and any travel arrangements with us before booking.</p></div>
@@ -249,26 +250,29 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
       <details><summary>Can you supply extensions?</summary><p>Yes, we can supply braiding hair. Ask about the options and agree on what is needed when enquiring.</p></details>
       <details><summary>How should I prepare my hair?</summary><p>Please have your hair washed, detangled and blow-dried before your appointment.</p></details>
     </div></section>
-<section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout"><div><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Tell us about your next look.</h2><p>Prepare your enquiry below, then copy it into a Facebook message to us. Attach your inspiration photo in the conversation. Your appointment is booked once we confirm the details.</p><p id="contact-unavailable" hidden>Please use the Facebook link below to contact us.</p><p>Nothing is sent from this form. <a href="#privacy">How your enquiry details are used</a></p></div><form id="enquiry-form" class="enquiry-card" aria-label="Appointment enquiry">
+<section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout"><div><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Tell us about your next look.</h2><p>Send your style ideas and preferred date using the form below. Your enquiry will be delivered to us by email. Your appointment is booked once we confirm the details.</p><p>We’ll reply using the phone number or email address you provide. <a href="#privacy">How your enquiry details are used</a></p></div><form id="enquiry-form" class="enquiry-card" aria-label="Appointment enquiry" action="https://formsubmit.co/tuzifanekedrendeles@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="Tress Braid Styles — Appointment enquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://tressbraidstyles.co.uk/thank-you.html">
+      <input id="enquiry-replyto" type="hidden" name="_replyto" disabled>
+      <div class="form-trap" aria-hidden="true"><label for="enquiry-website">Leave this field empty</label><input id="enquiry-website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
       <h3>Your appointment enquiry</h3><p>Required fields are marked *. Everything else is optional.</p>
       <div class="form-fields">
-        <div class="field"><label for="enquiry-name">Your name *</label><input id="enquiry-name" autocomplete="name" required maxlength="80"></div>
-        <div class="field"><label for="enquiry-contact">Phone number or email *</label><input id="enquiry-contact" type="text" required maxlength="120" aria-describedby="contact-help"><p id="contact-help">Just one is enough, so we can reply.</p></div>
-        <div class="field"><label for="enquiry-town">Town or village *</label><input id="enquiry-town" autocomplete="address-level2" required maxlength="100"></div>
-        <div class="field"><label for="enquiry-style">Style *</label><select id="enquiry-style" required><option value="">Choose a style</option><option>Knotless braids</option><option>Traditional box braids</option><option>Cornrows / feed-in braids</option><option>Children’s braids</option><option>Other style</option><option>Not sure yet</option></select></div>
-        <div class="field"><label for="enquiry-date">Preferred date (optional)</label><input id="enquiry-date" type="date" aria-describedby="date-help"><p id="date-help">A preference, not confirmed availability.</p></div>
-        <div class="field"><label for="enquiry-extensions">Need us to supply extensions? (optional)</label><select id="enquiry-extensions"><option value="">Choose an option</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
+        <div class="field"><label for="enquiry-name">Your name *</label><input id="enquiry-name" name="Name" autocomplete="name" required maxlength="80"></div>
+        <div class="field"><label for="enquiry-contact">Phone number or email *</label><input id="enquiry-contact" name="Phone or email" type="text" required maxlength="120" aria-describedby="contact-help"><p id="contact-help">Just one is enough, so we can reply.</p></div>
+        <div class="field"><label for="enquiry-town">Town or village *</label><input id="enquiry-town" name="Town or village" autocomplete="address-level2" required maxlength="100"></div>
+        <div class="field"><label for="enquiry-style">Style *</label><select id="enquiry-style" name="Style" required><option value="">Choose a style</option><option>Knotless braids</option><option>Traditional box braids</option><option>Cornrows / feed-in braids</option><option>Children’s braids</option><option>Other style</option><option>Not sure yet</option></select></div>
+        <div class="field"><label for="enquiry-date">Preferred date (optional)</label><input id="enquiry-date" name="Preferred date" type="date" aria-describedby="date-help"><p id="date-help">A preference, not confirmed availability.</p></div>
+        <div class="field"><label for="enquiry-extensions">Need us to supply extensions? (optional)</label><select id="enquiry-extensions" name="Extensions required"><option value="">Choose an option</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
       </div>
-      <p class="photo-send-note">Have a style photo? Attach it to your Facebook message when you contact us.</p>
-      <div class="field extra-details"><label for="enquiry-extra">Anything else? (optional)</label><p id="extra-help">Tell us about length, colour, another date or any questions.</p><textarea id="enquiry-extra" rows="3" maxlength="1500" aria-describedby="extra-help"></textarea></div>
-      <button id="request-enquiry" class="button" type="submit">Prepare my enquiry</button>
-      <div id="message-review" hidden><label for="prepared-message">Your message to Tress Braid Styles</label><textarea id="prepared-message" rows="10" readonly></textarea><button id="copy-enquiry" class="button" type="button">Copy message</button></div>
+      <div class="photo-attachment"><label for="enquiry-photo">Style photo (optional)</label><input id="enquiry-photo" type="file" name="attachment" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" aria-describedby="photo-help"><p id="photo-help">One JPG, PNG, WebP or HEIC image, up to 10 MB. Please only share a photo you have permission to use.</p></div>
+      <div class="field extra-details"><label for="enquiry-extra">Anything else? (optional)</label><p id="extra-help">Tell us about length, colour, another date or any questions.</p><textarea id="enquiry-extra" name="Extra details" rows="3" maxlength="1500" aria-describedby="extra-help"></textarea></div>
+      <button id="request-enquiry" class="button" type="submit">Send enquiry</button>
       <p id="copy-status" class="status" role="status" aria-live="polite"></p>
-      <a id="contact-link" class="button contact-link" hidden>Continue to enquire</a>
-      <p id="contact-hint" hidden>Prefer to message? Contact us on Facebook.</p>
-      <noscript><p><a href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer">Enquire on Facebook</a> — tell us the style you have in mind and your preferred date.</p></noscript>
+      <a id="contact-link" class="button contact-link" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer">Prefer Facebook? Message us</a>
+      <noscript><p>You can send this form without JavaScript. Please keep any attached image below 10 MB.</p></noscript>
     </form></div></section>
-    <section id="privacy" class="section wrap" aria-labelledby="privacy-title"><div class="faq"><details><summary id="privacy-title">Your enquiry and privacy</summary><p>This form prepares your message in your browser. It does not send your form details to us or save them in browser storage. The copy button places the message on your device clipboard. When you send it through Facebook, Meta processes it under its <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">privacy policy</a>. The details you choose to send are for discussing your enquiry and arranging your appointment. Contact us in the same conversation with questions about your information or to request its deletion.</p></details></div></section>
+    <section id="privacy" class="section wrap" aria-labelledby="privacy-title"><div class="faq"><details><summary id="privacy-title">Your enquiry and privacy</summary><p>When you send this form, FormSubmit processes your details and any optional photo to deliver the enquiry to our Gmail inbox. We use the information to reply to your enquiry and arrange your appointment. FormSubmit retains submission text in its archive for 30 days; uploaded files are not retained in that archive. Read <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit’s privacy information</a>. Please avoid including sensitive personal information. To ask about your information or request its deletion, <a href="mailto:tuzifanekedrendeles@gmail.com">email us</a>. If you choose Facebook instead, Meta processes your message under its <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p></details></div></section>
   </main>
   <footer class="footer"><div class="footer-grid wrap"><div><div class="footer-brand">Tress Braid Styles</div><p>Protective styles, beautifully personal.</p></div><div><p>Female clients · Newmarket · By appointment</p><a href="#booking">Appointment enquiries</a><a class="social-link" href="#privacy">Enquiry privacy</a><a class="social-link" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer">Facebook · @tressbraidstyles ↗</a></div></div></footer>
 <script>/* Only enter owner-approved, public business details. Never add secrets here.
@@ -287,111 +291,42 @@ window.BRAIDS_CONFIG = {
   ].map(item => ({ ...item, displaySrc: item.src.replace('.jpg', '-refined.svg') }))
 };
 
-'use strict';
+ 'use strict';
 (() => {
-  const config = window.BRAIDS_CONFIG || {};
-  const message = { value: '' };
-  const status = document.getElementById('copy-status');
-  const contactLink = document.getElementById('contact-link');
-  const contact = config.contact || {};
   const form = document.getElementById('enquiry-form');
   const field = key => document.getElementById('enquiry-' + key);
-  function composeMessage() {
-    const value = key => field(key).value.trim();
-    const lines = ['Hi Tress Braid Styles, I’d like to enquire about a braiding appointment.', '',
-      'Name: ' + value('name'), 'Reply to: ' + value('contact'),
-      'Town / village: ' + value('town'), 'Style: ' + value('style')];
-    const date = value('date');
-    if (date) {
-      const parts = date.split('-');
-      lines.push('Preferred date: ' + (parts.length === 3 ? parts.reverse().join('/') : date));
-    }
-    if (value('extensions')) lines.push('Extensions supplied by Tress Braid Styles: ' + value('extensions'));
-    if (value('extra')) lines.push('', 'Extra details: ' + value('extra'));
-    lines.push('', 'Please could you confirm the options, quote and appointment details?');
-    message.value = lines.join('\n');
-    document.getElementById('prepared-message').value = message.value;
-  }
-  function validateEnquiry() {
+  const button = document.getElementById('request-enquiry');
+  const status = document.getElementById('copy-status');
+  const replyTo = document.getElementById('enquiry-replyto');
+  const validEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  function resetButton() { button.disabled = false; button.textContent = 'Send enquiry'; }
+  function validate() {
     const reply = field('contact');
     const value = reply.value.trim();
-    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    const validPhone = /^\+?[\d\s().-]+$/.test(value) && value.replace(/\D/g, '').length >= 7 && value.replace(/\D/g, '').length <= 15;
-    reply.setCustomValidity(value && !validEmail && !validPhone ? 'Enter a phone number or email address so we can reply.' : '');
+    const digits = value.replace(/\D/g, '');
+    const phone = /^\+?[\d\s().-]+$/.test(value) && digits.length >= 7 && digits.length <= 15;
+    reply.setCustomValidity(value && !validEmail(value) && !phone ? 'Enter a phone number or email address so we can reply.' : '');
     for (const key of ['name', 'town']) field(key).setCustomValidity(field(key).value.trim() ? '' : 'Please complete this field.');
-    composeMessage();
-    if (!form.reportValidity()) {
-      status.textContent = 'Please complete the required details above.';
-      return false;
-    }
-    return true;
+    const photo = field('photo').files[0];
+    const supportedPhoto = !photo || /\.(jpe?g|png|webp|heic|heif)$/i.test(photo.name);
+    field('photo').setCustomValidity(photo && (!supportedPhoto || !photo.size || photo.size > 10 * 1024 * 1024) ? 'Choose one JPG, PNG, WebP or HEIC image, up to 10 MB.' : '');
+    replyTo.disabled = !validEmail(value);
+    replyTo.value = validEmail(value) ? value : '';
+    return form.reportValidity();
   }
   form.addEventListener('submit', event => {
-    event.preventDefault();
-    if (!validateEnquiry()) return;
-    document.getElementById('message-review').hidden = false;
-    status.textContent = 'Your message is ready. Copy it, open Facebook below, then paste and send it to us. Nothing has been sent yet.';
-    document.getElementById('prepared-message').focus();
+    if (!validate()) { event.preventDefault(); status.textContent = 'Please check the details above.'; return; }
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.textContent = 'Opening secure submission. Please complete any spam check to finish sending your enquiry.';
   });
   form.addEventListener('input', () => {
-    for (const key of ['name', 'contact', 'town']) field(key).setCustomValidity('');
+    for (const key of ['name', 'contact', 'town', 'photo']) field(key).setCustomValidity('');
     status.textContent = '';
-    composeMessage();
-    updateContact();
   });
-  form.addEventListener('change', () => { composeMessage(); updateContact(); });
-  contactLink.addEventListener('click', event => {
-    if (!validateEnquiry()) event.preventDefault();
-    else updateContact();
-  });
-  // Fail closed: an unapproved or malformed destination never becomes a link.
-  function contactUrl(text) {
-    if (contact.approved !== true) return '';
-    if (contact.type === 'whatsapp' && /^[1-9]\d{7,14}$/.test(contact.value)) {
-      return 'https://wa.me/' + contact.value + '?text=' + encodeURIComponent(text);
-    }
-    if (contact.type === 'email' && /^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(contact.value)) {
-      return 'mailto:' + contact.value + '?subject=Braiding%20appointment%20enquiry&body=' + encodeURIComponent(text);
-    }
-    if (contact.type === 'facebook' && contact.value === 'https://www.facebook.com/tressbraidstyles') {
-      return contact.value;
-    }
-    return '';
-  }
-  function updateContact() {
-    const url = contactUrl(message.value);
-    contactLink.hidden = !url;
-    document.getElementById('contact-hint').hidden = !url;
-    document.getElementById('contact-unavailable').hidden = !!url;
-    if (url) {
-      contactLink.href = url;
-      contactLink.target = '_blank';
-      contactLink.rel = 'noopener noreferrer';
-      const labels = { whatsapp: 'Message us on WhatsApp', email: 'Email us', facebook: 'Message us on Facebook' };
-      contactLink.textContent = labels[contact.type];
-      document.getElementById('contact-hint').textContent = contact.type === 'facebook'
-        ? 'Paste your prepared message into Facebook and send it to us. You can attach your style photo there.'
-        : 'Prefer to message? Contact us directly.';
-    } else contactLink.removeAttribute('href');
-  }
-  document.getElementById('copy-enquiry').addEventListener('click', async () => {
-    if (!validateEnquiry()) return;
-    const preview = document.getElementById('prepared-message');
-    const copiedMessage = message.value;
-    try {
-      await navigator.clipboard.writeText(copiedMessage);
-      status.textContent = message.value === copiedMessage
-        ? 'Message copied. Open Facebook, paste it into your conversation with us, add a photo if you wish, and send.'
-        : 'Your details changed. Copy the updated message before sending.';
-    } catch (_) {
-      preview.focus(); preview.select();
-      status.textContent = 'Copy the selected message above, then paste it into Facebook and send it to us.';
-    }
-  });
+  window.addEventListener('pageshow', resetButton);
   const today = new Date();
   field('date').min = [today.getFullYear(), String(today.getMonth() + 1).padStart(2, '0'), String(today.getDate()).padStart(2, '0')].join('-');
-  composeMessage();
-  updateContact();
 })();
 
 'use strict';
