@@ -224,6 +224,28 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .facebook-nav, .instagram-nav, .platform-label { white-space: nowrap; }
 .nav-socials { display: flex; align-items: center; gap: 24px; }
 @media(max-width:800px) { .nav-socials { order: 2; width: 100%; gap: 22px; } .nav-links > a[href="#booking"] { order: 1; } }
+
+.enquiry-layout { width: min(900px,calc(100% - 48px)); grid-template-columns: minmax(0,1fr); gap: 32px; }
+.enquiry-intro { width: min(100%,760px); margin-inline: auto; text-align: center; }
+.enquiry-intro .eyebrow { justify-content: center; }
+.cta .enquiry-intro h2 { margin: 16px 0; font-size: clamp(2.4rem,4vw,3.5rem); }
+.enquiry-intro p { max-width: 570px; margin: 0 auto; }
+.form-fields { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 24px; margin-top: 24px; }
+.enquiry-card { padding: 32px 36px; }
+.enquiry-card h3 { font-size: 1.6rem; }
+.enquiry-card h3 + p { margin: 6px 0 0; }
+.enquiry-card label { margin-bottom: 6px; font-size: .92rem; }
+.enquiry-card .field p { font-size: .8rem; }
+.enquiry-options { margin-top: 24px; border-block: 1px solid var(--line); }
+.enquiry-options summary { min-height: 48px; padding-block: 14px; cursor: pointer; font-weight: 700; font-size: .95rem; }
+.enquiry-options summary::marker { color: var(--gold-text); }
+.enquiry-options summary span { color: var(--muted); font-weight: 400; }
+.enquiry-options .photo-attachment { margin-top: 0; padding-top: 12px; border-top: 0; }
+.enquiry-options .extra-details { margin: 20px 0 24px; }
+.enquiry-card #request-enquiry { display: block; max-width: 340px; margin: 24px auto 0; }
+.enquiry-card .contact-link { display: block; width: fit-content; max-width: 100%; margin: 8px auto 0; padding: 10px 12px; font-size: .9rem; }
+.cta .enquiry-card .enquiry-footnote { margin: 12px 0 0; text-align: center; font-size: .78rem; }
+@media(max-width:600px) { .enquiry-layout { width: calc(100% - 36px); gap: 24px; } .enquiry-card { padding: 24px 20px; } .form-fields { grid-template-columns: minmax(0,1fr); gap: 18px; } .enquiry-card #request-enquiry { max-width: none; } }
 </style>
 </head>
 <body>
@@ -272,7 +294,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
       <details><summary>Can you supply extensions?</summary><p>Yes, we can supply braiding hair. Ask about the options and agree on what is needed when enquiring.</p></details>
       <details><summary>How should I prepare my hair?</summary><p>Please have your hair washed, detangled and blow-dried before your appointment.</p></details>
     </div></section>
-<section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout"><div><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Tell us about your next look.</h2><p>Send your style ideas and preferred date using the form below. Your enquiry will be delivered to us by email. Your appointment is booked once we confirm the details.</p><p>We’ll reply using the phone number or email address you provide. <a href="#privacy">How your enquiry details are used</a></p></div><form id="enquiry-form" class="enquiry-card" aria-label="Appointment enquiry" action="https://formsubmit.co/tuzifanekedrendeles@gmail.com" method="POST" enctype="multipart/form-data">
+<section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout"><div class="enquiry-intro"><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Tell us about your next look.</h2><p>Share your style and preferred date. We’ll reply by phone or email to discuss your appointment.</p></div><form id="enquiry-form" class="enquiry-card" aria-label="Appointment enquiry" action="https://formsubmit.co/tuzifanekedrendeles@gmail.com" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Tress Braid Styles — Appointment enquiry">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://tressbraidstyles.co.uk/thank-you.html">
@@ -287,11 +309,14 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
         <div class="field"><label for="enquiry-date">Preferred date (optional)</label><input id="enquiry-date" name="Preferred date" type="date" aria-describedby="date-help"><p id="date-help">A preference, not confirmed availability.</p></div>
         <div class="field"><label for="enquiry-extensions">Need us to supply extensions? (optional)</label><select id="enquiry-extensions" name="Extensions required"><option value="">Choose an option</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
       </div>
+      <details id="enquiry-options" class="enquiry-options"><summary>Add more details <span>(optional)</span></summary>
       <div class="photo-attachment"><label for="enquiry-photo">Style photo (optional)</label><input id="enquiry-photo" type="file" name="attachment" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" aria-describedby="photo-help"><p id="photo-help">One JPG, PNG, WebP or HEIC image, up to 10 MB. Please only share a photo you have permission to use.</p></div>
       <div class="field extra-details"><label for="enquiry-extra">Anything else? (optional)</label><p id="extra-help">Tell us about length, colour, another date or any questions.</p><textarea id="enquiry-extra" name="Extra details" rows="3" maxlength="1500" aria-describedby="extra-help"></textarea></div>
+      </details>
       <button id="request-enquiry" class="button" type="submit">Send enquiry</button>
       <p id="copy-status" class="status" role="status" aria-live="polite"></p>
       <a id="contact-link" class="button contact-link" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer">Prefer Facebook? Message us</a>
+      <p class="enquiry-footnote">Your appointment is confirmed only once we agree the details. <a href="#privacy">Enquiry privacy</a></p>
       <noscript><p>You can send this form without JavaScript. Please keep any attached image below 10 MB.</p></noscript>
     </form></div></section>
     <section id="privacy" class="section wrap" aria-labelledby="privacy-title"><div class="faq"><details><summary id="privacy-title">Your enquiry and privacy</summary><p>When you send this form, FormSubmit processes your details and any optional photo to deliver the enquiry to our Gmail inbox. We use the information to reply to your enquiry and arrange your appointment. FormSubmit retains submission text in its archive for 30 days; uploaded files are not retained in that archive. Read <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit’s privacy information</a>. Please avoid including sensitive personal information. To ask about your information or request its deletion, <a href="mailto:tuzifanekedrendeles@gmail.com">email us</a>. If you choose Facebook instead, Meta processes your message under its <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p></details></div></section>
@@ -332,6 +357,7 @@ window.BRAIDS_CONFIG = {
     const photo = field('photo').files[0];
     const supportedPhoto = !photo || /\.(jpe?g|png|webp|heic|heif)$/i.test(photo.name);
     field('photo').setCustomValidity(photo && (!supportedPhoto || !photo.size || photo.size > 10 * 1024 * 1024) ? 'Choose one JPG, PNG, WebP or HEIC image, up to 10 MB.' : '');
+    if (!field('photo').validity.valid) document.getElementById('enquiry-options').open = true;
     replyTo.disabled = !validEmail(value);
     replyTo.value = validEmail(value) ? value : '';
     return form.reportValidity();
@@ -346,6 +372,10 @@ window.BRAIDS_CONFIG = {
     for (const key of ['name', 'contact', 'town', 'photo']) field(key).setCustomValidity('');
     status.textContent = '';
   });
+  form.addEventListener('invalid', event => {
+    const optionalSection = event.target.closest('details');
+    if (optionalSection) optionalSection.open = true;
+  }, true);
   window.addEventListener('pageshow', resetButton);
   const today = new Date();
   field('date').min = [today.getFullYear(), String(today.getMonth() + 1).padStart(2, '0'), String(today.getDate()).padStart(2, '0')].join('-');
