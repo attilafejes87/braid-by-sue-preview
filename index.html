@@ -281,7 +281,6 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .wig-choice{padding:14px 18px;border:1px solid var(--gold);border-radius:12px;background:var(--beige);font-weight:700;}
 
 /* Shared navigation and footer layout. */
-.nav-toggle { display:none; }
 .footer-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); align-items:start; gap:64px; }
 .footer .footer-grid > .footer-sections { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:32px; max-width:none; }
 .footer-group { min-width:0; }
@@ -294,13 +293,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 @media(max-width:1000px) {
  .nav { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; min-height:78px; padding-block:16px; align-items:center; }
  .nav .brand { font-size:clamp(1.18rem,5.3vw,1.65rem); width:fit-content; min-width:0; white-space:nowrap; }
- .nav.menu-ready .nav-toggle { display:inline-flex; justify-content:center; align-items:center; gap:8px; min-height:44px; padding:9px 12px; border:1px solid var(--line); border-radius:10px; background:var(--paper); color:var(--ink); font:700 .8rem Arial,sans-serif; cursor:pointer; }
- .nav-toggle svg { width:18px; height:18px; }
- .nav-toggle .menu-close { display:none; }
- .nav.menu-open .nav-toggle .menu-bars { display:none; }
- .nav.menu-open .nav-toggle .menu-close { display:block; }
  .nav .nav-links { grid-column:1/-1; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px 16px; width:100%; padding-top:12px; border-top:1px solid var(--line); }
- .nav.menu-ready:not(.menu-open) .nav-links { display:none; }
  .nav .nav-links > a { justify-content:flex-start; min-height:46px; padding:10px 0; font-size:.92rem; }
  .nav .nav-links > a:last-child { grid-column:1/-1; order:1; justify-content:center; margin-block:8px; padding:12px 20px; }
  .nav .nav-socials { grid-column:1/-1; order:2; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; width:100%; border-top:1px solid var(--line); padding-top:8px; }
@@ -315,15 +308,27 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
  .footer-group-links a { font-size:.84rem; }
 }
 
+
+@media(max-width:1000px) {
+ .nav { grid-template-columns:minmax(0,1fr); gap:12px; padding-block:18px; }
+ .nav .brand { justify-self:center; font-size:1.65rem; }
+ .nav .brand::after { left:50%; transform:translateX(-50%); }
+ .nav .nav-links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px 10px; padding-top:10px; }
+ .nav .nav-links > a { justify-content:center; text-align:center; min-height:44px; padding:10px 4px; font-size:.83rem; }
+ .nav .nav-links > a:last-child { grid-column:auto; order:0; margin:0; padding:10px 8px; }
+ .nav .nav-socials { grid-column:1/-1; grid-template-columns:repeat(2,minmax(0,1fr)); justify-items:center; gap:10px; padding-top:8px; margin-top:8px; }
+ .nav .nav-socials a { font-size:.82rem; }
+}
+
 </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <div class="notice">Personal hair braiding for female clients · Newmarket & surrounding areas</div>
-  <header><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="#main" aria-label="Tress Braid Styles — home">Tress Braid Styles</a><button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu"><span>Menu</span><svg class="menu-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button><div class="nav-links" id="primary-navigation"><a href="#portfolio">Our work</a><a href="wigs.html">Wigs</a><a href="#area">Our area</a><a href="#faq">FAQs</a><div class="nav-socials"><a class="facebook-nav" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span><span class="social-label-text">Facebook</span></a><a class="instagram-nav" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span><span class="social-label-text">Instagram</span></a></div><a href="#booking">Enquire</a></div></nav></header>
+  <header><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="#main" aria-label="Tress Braid Styles — home">Tress Braid Styles</a><div class="nav-links" id="primary-navigation"><a href="#portfolio">Our work</a><a href="wigs.html">Wigs</a><a href="products.html">Products</a><a href="#area">Our area</a><a href="#faq">FAQs</a><div class="nav-socials"><a class="facebook-nav" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span><span class="social-label-text">Facebook</span></a><a class="instagram-nav" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span><span class="social-label-text">Instagram</span></a></div><a href="#booking">Enquire</a></div></nav></header>
   <main id="main" tabindex="-1">
     <section class="hero"><div class="hero-inner wrap">
-      <div class="hero-copy"><div class="eyebrow">Newmarket &amp; surrounding areas</div><h1>Beautiful braids <em>in Newmarket.</em></h1><p class="lead">Personal hair braiding for women and girls in Newmarket and surrounding areas. Explore our work and share your style idea for an individual quote.</p><div class="hero-actions"><a class="button" href="#booking">Enquire about your style</a><a class="secondary-link" href="#portfolio">Explore our work</a><div class="hero-socials"><a class="secondary-link facebook-inline" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span> Follow us on Facebook <span aria-hidden="true">↗</span></a><a class="secondary-link instagram-inline" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span> Follow us on Instagram <span aria-hidden="true">↗</span></a></div></div><p class="small-note">By appointment · Prices by individual quote</p></div>
+      <div class="hero-copy"><div class="eyebrow">Newmarket &amp; surrounding areas</div><h1>Beautiful braids <em>in Newmarket.</em></h1><p class="lead">Personal hair braiding for women and girls in Newmarket and surrounding areas. Explore our work and share your style idea for an individual quote.</p><div class="hero-actions"><a class="button" href="#booking">Enquire about your style</a><a class="secondary-link" href="#portfolio">Explore our work</a><div class="hero-socials"><a class="secondary-link facebook-inline" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span> Follow us on Facebook</a><a class="secondary-link instagram-inline" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span> Follow us on Instagram</a></div></div><p class="small-note">By appointment · Prices by individual quote</p></div>
       <div class="hero-feature"><img src="hero-ai-braids.jpg" width="1086" height="1448" alt="AI-generated style inspiration showing long dark braids with warm highlights" fetchpriority="high"><p class="hero-image-note">AI-generated style inspiration</p></div>
     </div></section>
     <section class="work-gallery wrap" aria-label="Explore our work">
@@ -346,7 +351,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 <section id="facebook" class="facebook-section wrap" aria-labelledby="facebook-title">
   <div class="facebook-card">
     <div class="facebook-copy"><div class="facebook-kicker">FOLLOW &amp; CONNECT</div><h2 id="facebook-title">Your next look.<br>A little more inspiration.</h2><p>Find Tress Braid Styles on Instagram and Facebook. Explore our pages, follow along and share your style ideas. For appointment enquiries, use the form below or message us on Facebook or Instagram.</p></div>
-    <div class="social-platforms"><div class="facebook-action"><div class="platform-label"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span><span class="social-label-text">Instagram</span></div><p class="facebook-page-name">Tress Braid Styles</p><p class="facebook-handle">@tress_braidstyles</p><a class="button instagram-button" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer">Visit Instagram <span aria-hidden="true">↗</span></a><p class="facebook-note">Follow us · Get in touch</p></div><div class="facebook-action"><div class="platform-label"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span><span class="social-label-text">Facebook</span></div><p class="facebook-page-name">Tress Braid Styles</p><p class="facebook-handle">@tressbraidstyles</p><a class="button facebook-button" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer">Visit Facebook <span aria-hidden="true">↗</span></a><p class="facebook-note">Follow us · Get in touch</p></div></div>
+    <div class="social-platforms"><div class="facebook-action"><div class="platform-label"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span><span class="social-label-text">Instagram</span></div><p class="facebook-page-name">Tress Braid Styles</p><p class="facebook-handle">@tress_braidstyles</p><a class="button instagram-button" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer">Visit Instagram</a><p class="facebook-note">Follow us · Get in touch</p></div><div class="facebook-action"><div class="platform-label"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span><span class="social-label-text">Facebook</span></div><p class="facebook-page-name">Tress Braid Styles</p><p class="facebook-handle">@tressbraidstyles</p><a class="button facebook-button" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer">Visit Facebook</a><p class="facebook-note">Follow us · Get in touch</p></div></div>
   </div>
 </section>
 <section id="wigs" class="wig-intro" aria-labelledby="wigs-title"><div class="wrap wig-intro-inner"><div><div class="eyebrow">A new way to wear your style</div><h2 id="wigs-title">A little change.<br>A whole new look.</h2><p>Explore our wig collection, from sleek bobs to soft waves and full curls. Find a style you love and ask us about ordering. We also offer wig styling, with an individual quote for your chosen look.</p><div class="hero-actions"><a class="button" href="wigs.html">Explore wigs · from £99</a><a class="secondary-link" href="index.html?wig=styling#booking">Ask for a styling quote</a></div></div><div class="wig-intro-photos"><img src="wig-copper-bob.webp" alt="Copper straight bob wig style example" width="450" height="450" loading="lazy"><img src="wig-balayage-wave.jpg" alt="Highlighted wavy wig style example" width="450" height="450" loading="lazy"></div></div></section>
@@ -373,7 +378,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
         <div class="field"><label for="enquiry-name">Your name *</label><input id="enquiry-name" name="Name" autocomplete="name" required maxlength="80"></div>
         <div class="field"><label for="enquiry-contact">Phone number *</label><input id="enquiry-contact" name="Phone number" type="tel" autocomplete="tel" inputmode="tel" required maxlength="32" pattern="\+?[0-9 \(\)\.\-]{7,32}" aria-describedby="contact-help"><p id="contact-help">We’ll use this number to contact you.</p></div>
         <div class="field"><label for="enquiry-town">Town or village *</label><input id="enquiry-town" name="Town or village" autocomplete="address-level2" required maxlength="100"></div>
-        <div class="field"><label for="enquiry-style">Style *</label><select id="enquiry-style" name="Style" required><option value="">Choose a style</option><option>Knotless braids</option><option>Traditional box braids</option><option>Cornrows / feed-in braids</option><option>Children’s braids</option><option>Wig enquiry</option><option>Wig styling</option><option>Other style</option><option>Not sure yet</option></select></div>
+        <div class="field"><label for="enquiry-style">Style *</label><select id="enquiry-style" name="Style" required><option value="">Choose a style</option><option>Knotless braids</option><option>Traditional box braids</option><option>Cornrows / feed-in braids</option><option>Children’s braids</option><option>Wig enquiry</option><option>Wig styling</option><option>Product enquiry</option><option>Other style</option><option>Not sure yet</option></select></div>
         <div class="field"><label for="enquiry-date">Preferred date (optional)</label><input id="enquiry-date" name="Preferred date" type="date" aria-describedby="date-help"><p id="date-help">A preference, not confirmed availability.</p></div>
         <div class="field"><label for="enquiry-extensions">Need us to supply extensions? (optional)</label><select id="enquiry-extensions" name="Extensions required"><option value="">Choose an option</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
       </div>
@@ -383,13 +388,13 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
       </details>
       <button id="request-enquiry" class="button" type="submit">Send enquiry</button>
       <p id="copy-status" class="status" role="status" aria-live="polite"></p>
-      <div class="enquiry-socials"><p>Prefer to message?</p><div class="enquiry-social-links"><a id="contact-link" class="contact-link" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a><a class="contact-link" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a></div></div>
+      <div class="enquiry-socials"><p>Prefer to message?</p><div class="enquiry-social-links"><a id="contact-link" class="contact-link" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer">Facebook</a><a class="contact-link" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div>
       <p class="enquiry-footnote">Your appointment is confirmed only once we agree the details.</p>
       <noscript><p>You can send this form without JavaScript. Please keep any attached image below 10 MB.</p></noscript>
       <details id="privacy" class="enquiry-privacy"><summary>Your enquiry and privacy</summary><p>When you send this form, FormSubmit processes your details and any optional photo to deliver the enquiry to our Gmail inbox. We use the information to reply to your enquiry and arrange your appointment. FormSubmit retains submission text in its archive for 30 days; uploaded files are not retained in that archive. Read <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit’s privacy information</a>. Please avoid including sensitive personal information. To ask about your information or request its deletion, <a href="mailto:tuzifanekedrendeles@gmail.com">email us</a>. If you contact us on Facebook or Instagram, Meta processes your message under its <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p></details>
     </form></div></section>
   </main>
-  <footer class="footer"><div class="footer-grid wrap"><div><div class="footer-brand">Tress Braid Styles</div><p>Protective styles, beautifully personal.</p><p class="footer-location">Female clients · Newmarket<br>By appointment</p></div><div class="footer-sections"><div class="footer-group"><h2>Explore</h2><div class="footer-group-links"><a href="wigs.html">Wigs</a><a href="#booking">Enquire</a><a href="#privacy">Enquiry privacy</a></div></div><div class="footer-group"><h2>Follow us</h2><div class="footer-group-links"><a href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span><span>Facebook ↗</span></a><a href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span><span>Instagram ↗</span></a></div></div></div></footer>
+  <footer class="footer"><div class="footer-grid wrap"><div><div class="footer-brand">Tress Braid Styles</div><p>Protective styles, beautifully personal.</p><p class="footer-location">Female clients · Newmarket<br>By appointment</p></div><div class="footer-sections"><div class="footer-group"><h2>Explore</h2><div class="footer-group-links"><a href="wigs.html">Wigs</a><a href="products.html">Products</a><a href="#booking">Enquire</a><a href="#privacy">Enquiry privacy</a></div></div><div class="footer-group"><h2>Follow us</h2><div class="footer-group-links"><a href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span><span>Facebook</span></a><a href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span><span>Instagram</span></a></div></div></div></footer>
 <script>/* Only enter owner-approved, public business details. Never add secrets here.
  * Images must be authentic client work, with publication consent recorded
  * in docs/asset-register.csv. Approval here is not evidence of that consent.
@@ -531,27 +536,25 @@ window.BRAIDS_CONFIG = {
  form.querySelector('.enquiry-footnote').textContent=styling ? 'Styling is priced by individual quote. Your appointment is confirmed only once we agree the price and details.' : 'An enquiry is not an order. We’ll confirm the exact wig, availability and total price before you pay.';
 })();
 </script>
+
 <script>
 (() => {
- const nav = document.querySelector('.nav');
- if (!nav) return;
- const button = nav.querySelector('.nav-toggle');
- const links = nav.querySelector('.nav-links');
- function closeMenu(returnFocus = false) {
-  nav.classList.remove('menu-open');
-  button.setAttribute('aria-expanded', 'false');
-  button.setAttribute('aria-label', 'Open menu');
-  if (returnFocus) button.focus();
- }
- button.addEventListener('click', () => {
-  const open = nav.classList.toggle('menu-open');
-  button.setAttribute('aria-expanded', String(open));
-  button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
- });
- links.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
- nav.addEventListener('keydown', event => { if (event.key === 'Escape' && nav.classList.contains('menu-open')) closeMenu(true); });
- window.matchMedia('(max-width:1000px)').addEventListener('change', () => closeMenu());
- nav.classList.add('menu-ready');
+ const products = {"cleansing-shampoo": {"name": "Cantu Cleansing Cream Shampoo \u00b7 13.5 oz", "price": 6.99}, "hydrating-conditioner": {"name": "Cantu Hydrating Cream Conditioner \u00b7 13.5 oz", "price": 6.99}, "leave-in-cream": {"name": "Cantu Leave-In Conditioning Cream \u00b7 16 oz", "price": 7.99}, "deep-treatment": {"name": "Cantu Deep Treatment Masque \u00b7 12 oz", "price": 8.99}, "detangling-therapy": {"name": "Aunt Jackie\u2019s Knot On My Watch Detangler \u00b7 355 ml", "price": 8.99}, "olive-styling-gel": {"name": "Eco Style Olive Oil Styling Gel \u00b7 16 oz", "price": 4.99}, "braiding-gel": {"name": "Shine \u2019n Jam Extra Hold Conditioning Gel \u00b7 8 oz / 227 g", "price": 7.99}, "setting-mousse": {"name": "Magic Fingers Setting Mousse \u00b7 12 oz", "price": 7.99}, "castor-oil": {"name": "Sunny Isle Jamaican Black Castor Oil \u00b7 4 oz", "price": 5.99}, "satin-bonnet": {"name": "Magic Black Satin Bonnet \u00b7 XL", "price": 3.99}, "edge-brush": {"name": "T&G Twin Edge Brush \u00b7 1 brush", "price": 2.49}, "afro-comb": {"name": "Essentials Plastic Afro Comb \u00b7 1 comb", "price": 2.49}, "help": {"name": "Help choosing haircare products", "price": null}};
+ const product = products[new URLSearchParams(location.search).get('product')];
+ if (!product) return;
+ const form = document.getElementById('enquiry-form');
+ document.getElementById('booking-title').textContent = 'Let’s talk haircare.';
+ document.querySelector('.enquiry-intro > p').textContent = 'Ask about a product or tell us what your routine needs. We’ll contact you by phone to confirm availability and the details.';
+ form.setAttribute('aria-label', 'Product enquiry');
+ form.querySelector('h3').textContent = 'Your product enquiry';
+ form.querySelector('[name="_subject"]').value = 'Tress Braid Styles — Product enquiry';
+ document.getElementById('enquiry-style').value = 'Product enquiry';
+ const choice=document.createElement('p');choice.className='wig-choice';choice.textContent=product.name+(product.price==null ? '' : ' · Guide price £'+product.price.toFixed(2));form.querySelector('.form-fields').before(choice);
+ const selected=document.createElement('input');selected.type='hidden';selected.name='Product selection';selected.value=choice.textContent;form.append(selected);
+ document.getElementById('enquiry-date').closest('.field').hidden=true;
+ document.getElementById('enquiry-extensions').closest('.field').hidden=true;
+ document.getElementById('extra-help').textContent='Tell us the quantity, any other products you’d like or your questions.';
+ form.querySelector('.enquiry-footnote').textContent='An enquiry is not an order. We’ll confirm stock, the final price and any collection or delivery arrangements before you pay.';
 })();
 </script>
 </body>
