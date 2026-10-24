@@ -303,16 +303,15 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
       <details><summary>Can you supply extensions?</summary><p>Yes, we can supply braiding hair. Ask about the options and agree on what is needed when enquiring.</p></details>
       <details><summary>How should I prepare my hair?</summary><p>Please have your hair washed, detangled and blow-dried before your appointment.</p></details>
     </div></section>
-<section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout"><div class="enquiry-intro"><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Tell us about your next look.</h2><p>Share your style and preferred date. We’ll reply by phone or email to discuss your appointment.</p></div><form id="enquiry-form" class="enquiry-card" aria-label="Appointment enquiry" action="https://formsubmit.co/tuzifanekedrendeles@gmail.com" method="POST" enctype="multipart/form-data">
+<section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout"><div class="enquiry-intro"><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Tell us about your next look.</h2><p>Share your style and preferred date. We’ll contact you by phone to discuss your appointment.</p></div><form id="enquiry-form" class="enquiry-card" aria-label="Appointment enquiry" action="https://formsubmit.co/tuzifanekedrendeles@gmail.com" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Tress Braid Styles — Appointment enquiry">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://tressbraidstyles.co.uk/thank-you.html">
-      <input id="enquiry-replyto" type="hidden" name="_replyto" disabled>
       <div class="form-trap" aria-hidden="true"><label for="enquiry-website">Leave this field empty</label><input id="enquiry-website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
       <h3>Your appointment enquiry</h3><p>Required fields are marked *. Everything else is optional.</p>
       <div class="form-fields">
         <div class="field"><label for="enquiry-name">Your name *</label><input id="enquiry-name" name="Name" autocomplete="name" required maxlength="80"></div>
-        <div class="field"><label for="enquiry-contact">Phone number or email *</label><input id="enquiry-contact" name="Phone or email" type="text" required maxlength="120" aria-describedby="contact-help"><p id="contact-help">Just one is enough, so we can reply.</p></div>
+        <div class="field"><label for="enquiry-contact">Phone number *</label><input id="enquiry-contact" name="Phone number" type="tel" autocomplete="tel" inputmode="tel" required maxlength="32" pattern="\+?[0-9 \(\)\.\-]{7,32}" aria-describedby="contact-help"><p id="contact-help">We’ll use this number to contact you.</p></div>
         <div class="field"><label for="enquiry-town">Town or village *</label><input id="enquiry-town" name="Town or village" autocomplete="address-level2" required maxlength="100"></div>
         <div class="field"><label for="enquiry-style">Style *</label><select id="enquiry-style" name="Style" required><option value="">Choose a style</option><option>Knotless braids</option><option>Traditional box braids</option><option>Cornrows / feed-in braids</option><option>Children’s braids</option><option>Other style</option><option>Not sure yet</option></select></div>
         <div class="field"><label for="enquiry-date">Preferred date (optional)</label><input id="enquiry-date" name="Preferred date" type="date" aria-describedby="date-help"><p id="date-help">A preference, not confirmed availability.</p></div>
@@ -353,22 +352,18 @@ window.BRAIDS_CONFIG = {
   const field = key => document.getElementById('enquiry-' + key);
   const button = document.getElementById('request-enquiry');
   const status = document.getElementById('copy-status');
-  const replyTo = document.getElementById('enquiry-replyto');
-  const validEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   function resetButton() { button.disabled = false; button.textContent = 'Send enquiry'; }
   function validate() {
     const reply = field('contact');
     const value = reply.value.trim();
     const digits = value.replace(/\D/g, '');
     const phone = /^\+?[\d\s().-]+$/.test(value) && digits.length >= 7 && digits.length <= 15;
-    reply.setCustomValidity(value && !validEmail(value) && !phone ? 'Enter a phone number or email address so we can reply.' : '');
+    reply.setCustomValidity(value && !phone ? 'Enter a valid phone number so we can contact you.' : '');
     for (const key of ['name', 'town']) field(key).setCustomValidity(field(key).value.trim() ? '' : 'Please complete this field.');
     const photo = field('photo').files[0];
     const supportedPhoto = !photo || /\.(jpe?g|png|webp|heic|heif)$/i.test(photo.name);
     field('photo').setCustomValidity(photo && (!supportedPhoto || !photo.size || photo.size > 10 * 1024 * 1024) ? 'Choose one JPG, PNG, WebP or HEIC image, up to 10 MB.' : '');
     if (!field('photo').validity.valid) document.getElementById('enquiry-options').open = true;
-    replyTo.disabled = !validEmail(value);
-    replyTo.value = validEmail(value) ? value : '';
     return form.reportValidity();
   }
   form.addEventListener('submit', event => {
