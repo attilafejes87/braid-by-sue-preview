@@ -338,42 +338,6 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 @media(max-width:900px) { .products-intro-inner { grid-template-columns:minmax(0,1fr); gap:28px; } .products-intro-copy > p{max-width:560px}.mini-products{width:100%;max-width:650px} }
 @media(max-width:600px) { .products-intro-inner { padding-block:36px; gap:24px; }.mini-products{gap:10px}.mini-product-image{padding:10px}.mini-product-copy{padding:12px 9px}.mini-product h3{font-size:.94rem;margin:7px 0 10px}.mini-product-price{font-size:1.18rem}.mini-product-brand{font-size:.57rem;letter-spacing:.04em} }
 
-
-/* Soft accents for booking, area and FAQs. */
-.experience .experience-grid { grid-template-columns:minmax(0,1fr); gap:32px; }
-.experience-copy { max-width:680px; margin-inline:auto; text-align:center; }
-.experience-copy > p { margin:0; }
-.experience .steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; list-style:none; margin:0; padding:0; border:0; }
-.experience .step { display:flex; flex-direction:column; gap:18px; min-width:0; padding:28px; border:1px solid #dfcfad; border-radius:18px; background:#f4ecd8; }
-.experience .step:nth-child(2) { background:#f3e7e0; border-color:#dfcdbf; }
-.experience .step:nth-child(3) { background:#e9eee3; border-color:#ccd6c2; }
-.step-number { display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; flex-shrink:0; border:1px solid var(--gold); border-radius:50%; background:rgba(255,253,248,.72); color:var(--gold-text); font:700 .85rem Arial,sans-serif; letter-spacing:.05em; }
-.experience .step strong { display:block; font-size:1.45rem; line-height:1.2; }
-.experience .step p { margin:12px 0 0; font-size:.94rem; line-height:1.7; }
-.area { background:#e8ede2; border-color:#cfd7c7; }
-.area .area-details { border-left:2px solid #8a9b77; border-radius:0 16px 16px 0; padding:24px 28px; background:rgba(255,253,248,.6); }
-.area .area-details p { margin:0; color:#4f5d47; }
-.faq { display:grid; gap:12px; }
-.faq details { padding:0 22px; border:1px solid var(--line); border-radius:14px; background:var(--paper); }
-.faq details[open] { border-color:var(--gold); background:#fffaf0; }
-.faq summary { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; padding:16px 0; font-size:1rem; line-height:1.5; list-style:none; }
-.faq summary::-webkit-details-marker { display:none; }
-.faq summary::after { content:'+'; display:inline-flex; align-items:center; justify-content:center; flex:0 0 28px; width:28px; height:28px; border-radius:50%; background:var(--beige); color:var(--gold-text); font:1.35rem Georgia,serif; }
-.faq details[open] summary::after { content:'−'; }
-.faq p { margin:0; padding:0 0 20px; line-height:1.75; }
-@media(max-width:900px) {
- .experience .steps { grid-template-columns:minmax(0,1fr); gap:14px; }
- .experience .step { display:grid; grid-template-columns:42px minmax(0,1fr); gap:18px; padding:24px; }
-}
-@media(max-width:600px) {
- .experience .step { padding:22px 18px; gap:14px; }
- .experience .step strong { font-size:1.3rem; }
- .experience .step p { margin-top:8px; font-size:.9rem; }
- .area .area-details { padding:22px; }
- .faq details { padding-inline:18px; }
- .faq summary { font-size:.94rem; gap:12px; }
-}
-
 </style>
 </head>
 <body>
@@ -411,7 +375,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 <section id="wigs" class="wig-intro" aria-labelledby="wigs-title"><div class="wrap wig-intro-inner"><div><div class="eyebrow">A new way to wear your style</div><h2 id="wigs-title">A little change.<br>A whole new look.</h2><p>Explore our wig collection, from sleek bobs to soft waves and full curls. Find a style you love and ask us about ordering. We also offer wig styling, with an individual quote for your chosen look.</p><div class="hero-actions"><a class="button" href="wigs.html">Explore wigs · from £99</a><a class="secondary-link" href="index.html?wig=styling#booking">Ask for a styling quote</a></div></div><div class="wig-intro-photos"><img src="wig-copper-bob.webp" alt="Copper straight bob wig style example" width="450" height="450" loading="lazy"><img src="wig-balayage-wave.jpg" alt="Highlighted wavy wig style example" width="450" height="450" loading="lazy"></div></div></section>
 <section id="products" class="products-intro" aria-labelledby="products-intro-title"><div class="wrap products-intro-inner"><div class="products-intro-copy"><div class="eyebrow">Haircare essentials</div><h2 id="products-intro-title">Everyday care<br>for your hair.</h2><p>Wash-day care, styling favourites and everyday accessories for curls, coils and braids.</p><a class="button" href="products.html">Explore all products</a><p class="products-intro-note">Guide prices · Enquire for availability</p></div><div class="mini-products"><a class="mini-product" href="index.html?product=leave-in-cream#booking" aria-label="Enquire about Cantu Leave-In Conditioning Cream"><div class="mini-product-image"><img src="product-leave-in-cream.jpg" alt="Cantu Leave-In Conditioning Cream" width="300" height="300" loading="lazy"></div><div class="mini-product-copy"><span class="mini-product-brand">Cantu</span><h3>Leave-In Cream</h3><span class="mini-product-price">£7.99</span></div></a><a class="mini-product" href="index.html?product=olive-styling-gel#booking" aria-label="Enquire about Eco Style Olive Oil Styling Gel"><div class="mini-product-image"><img src="product-olive-styling-gel.png" alt="Eco Style Olive Oil Styling Gel" width="300" height="300" loading="lazy"></div><div class="mini-product-copy"><span class="mini-product-brand">Eco Style</span><h3>Olive Oil Gel</h3><span class="mini-product-price">£4.99</span></div></a><a class="mini-product" href="index.html?product=satin-bonnet#booking" aria-label="Enquire about Magic Black Satin Bonnet"><div class="mini-product-image"><img src="product-satin-bonnet.jpg" alt="Magic Black Satin Bonnet" width="300" height="300" loading="lazy"></div><div class="mini-product-copy"><span class="mini-product-brand">Magic</span><h3>Satin Bonnet</h3><span class="mini-product-price">£3.99</span></div></a></div></div></section>
 <section id="about" class="section wrap" aria-labelledby="about-title"><div class="section-head"><div class="eyebrow">Meet your braider</div><h2 id="about-title">Braiding with a personal touch.</h2><p>We create braids for women and girls in Newmarket and surrounding areas. Share a style you love or ask for help choosing your look. You’ll agree the style, extensions and appointment details together before booking.</p></div></section>
-<section id="experience" class="section experience" aria-labelledby="experience-title"><div class="experience-grid wrap"><div class="experience-copy"><div class="eyebrow">How to book</div><h2 id="experience-title">A style starts with an idea.</h2><p>Tell us what you have in mind. We’ll discuss the options and quote before you agree on an appointment.</p></div><ol class="steps" role="list" aria-label="Booking steps"><li class="step"><span class="step-number" aria-hidden="true">01</span><div class="step-copy"><strong>Share your idea</strong><p>Send your enquiry using the form below. You can include a style photo to help us understand your look.</p></div></li><li class="step"><span class="step-number" aria-hidden="true">02</span><div class="step-copy"><strong>Agree the details</strong><p>Discuss the price, location, time needed and extensions.</p></div></li><li class="step"><span class="step-number" aria-hidden="true">03</span><div class="step-copy"><strong>Get ready</strong><p>Once we confirm your appointment, have your hair washed, detangled and blow-dried before it begins.</p></div></li></ol></div></section>
+<section id="experience" class="section experience" aria-labelledby="experience-title"><div class="experience-grid wrap"><div class="experience-copy"><div class="eyebrow">How to book</div><h2 id="experience-title">A style starts with an idea.</h2><p>Tell us what you have in mind. We’ll discuss the options and quote before you agree on an appointment.</p></div><div class="steps"><div class="step"><strong>Share your idea</strong><p>Send your enquiry using the form below. You can include a style photo to help us understand your look.</p></div><div class="step"><strong>Agree the details</strong><p>Discuss the price, location, time needed and extensions.</p></div><div class="step"><strong>Get ready</strong><p>Once we confirm your appointment, have your hair washed, detangled and blow-dried before it begins.</p></div></div></div></section>
     <section id="area" class="section area" aria-labelledby="area-title"><div class="area-grid wrap">
       <div><div class="eyebrow">A little closer to you</div><h2 id="area-title">Newmarket &amp; beyond.</h2><p>Based in Newmarket, with enquiries welcome from the surrounding 20–25 miles. Share your town or village so we can discuss the appointment location with you.</p></div>
       <div class="area-details"><p>Farther away? You are welcome to enquire. Agree the location and any travel arrangements with us before booking.</p></div>
