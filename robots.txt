@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tressbraidstyles.co.uk/sitemap.xml
