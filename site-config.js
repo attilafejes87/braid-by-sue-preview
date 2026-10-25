@@ -1,7 +1,7 @@
 /* Public website configuration. A Pixel ID is public; never put access tokens here.
- * Leave empty until the owner supplies the Tress Braid Styles Pixel/Dataset ID.
+ * Tress Braid Styles dataset created in Meta Events Manager with owner approval.
  */
 window.TRESS_SITE_CONFIG = Object.freeze({
-  metaPixelId: '',
+  metaPixelId: '1516526650496709',
   trackingHosts: ['tressbraidstyles.co.uk', 'www.tressbraidstyles.co.uk']
 });
