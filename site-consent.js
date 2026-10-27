@@ -40,11 +40,7 @@
     track('PageView');
     const page = location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
     if (page === '/wigs' || page === '/products') track('ViewContent', { content_name: page === '/wigs' ? 'Wig collection' : 'Haircare collection' });
-    if (page === '/thank-you') {
-      const pending = storageGet('sessionStorage', pendingKey);
-      removePending();
-      if (pending && pending.at <= Date.now() && Date.now() - pending.at < 30 * 60 * 1000) track('Lead', { content_name: 'Website enquiry' });
-    }
+
   }
   function startPixel() {
     if (!enabled || choice !== 'accepted') return;
@@ -95,7 +91,7 @@
   panel.hidden = true;
   panel.setAttribute('role', 'region');
   panel.setAttribute('aria-labelledby', 'cookie-panel-title');
-  panel.innerHTML = '<h2 id="cookie-panel-title">Your privacy choices</h2><p>With your permission, we use Meta Pixel to measure Facebook and Instagram advertising and help show relevant ads. Meta receives information about your visit, device and actions such as a completed enquiry. We do not send your form answers or photos to the pixel. You can use the whole website without allowing this. <a href="/privacy">Privacy &amp; cookie details</a>.</p><div class="cookie-actions"><button type="button" data-choice="rejected">Reject optional cookies</button><button type="button" data-choice="accepted">Allow Meta cookies</button><button type="button" class="cookie-close" hidden>Keep current choice</button></div>';
+  panel.innerHTML = '<h2 id="cookie-panel-title">Your privacy choices</h2><p>With your permission, we use Meta Pixel to measure Facebook and Instagram advertising and help show relevant ads. Meta receives information about your visit, device and actions such as opening an enquiry chat. We do not send your form answers or photos to the pixel. You can use the whole website without allowing this. <a href="/privacy">Privacy &amp; cookie details</a>.</p><div class="cookie-actions"><button type="button" data-choice="rejected">Reject optional cookies</button><button type="button" data-choice="accepted">Allow Meta cookies</button><button type="button" class="cookie-close" hidden>Keep current choice</button></div>';
   document.body.appendChild(panel);
   panel.querySelectorAll('[data-choice]').forEach(button => button.addEventListener('click', () => saveChoice(button.dataset.choice)));
   panel.querySelector('.cookie-close').addEventListener('click', closePanel);
@@ -132,12 +128,8 @@
     const target = new URL(link.href, location.href);
     if (['www.facebook.com', 'facebook.com', 'www.instagram.com', 'instagram.com'].includes(target.hostname)) track('Contact', { content_name: target.hostname.includes('instagram') ? 'Instagram' : 'Facebook' });
   });
-  document.addEventListener('submit', event => {
-    if (event.target.id !== 'enquiry-form' || event.defaultPrevented || !event.target.checkValidity()) return;
-    if (choice === 'accepted') {
-      try { sessionStorage.setItem(pendingKey, JSON.stringify({ at: Date.now() })); } catch (_) {}
-    }
-  });
+  // Opening a prepared message is a Contact event, never proof of a sent message.
+  document.addEventListener('tress:whatsapp-enquiry', () => track('Contact', { content_name: 'WhatsApp enquiry' }));
   window.addEventListener('storage', event => {
     if (event.key !== choiceKey) return;
     const wasAccepted = choice === 'accepted';
