@@ -338,6 +338,12 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 @media(max-width:900px) { .products-intro-inner { grid-template-columns:minmax(0,1fr); gap:28px; } .products-intro-copy > p{max-width:560px}.mini-products{width:100%;max-width:650px} }
 @media(max-width:600px) { .products-intro-inner { padding-block:36px; gap:24px; }.mini-products{gap:10px}.mini-product-image{padding:10px}.mini-product-copy{padding:12px 9px}.mini-product h3{font-size:.94rem;margin:7px 0 10px}.mini-product-price{font-size:1.18rem}.mini-product-brand{font-size:.57rem;letter-spacing:.04em} }
 
+.square-booking { padding:28px 32px; border:1px solid var(--gold); border-radius:18px; background:var(--paper); text-align:center; }
+.square-booking h3 { margin:0 0 10px; font:400 1.8rem Georgia,serif; }
+.cta .square-booking p { max-width:540px; margin:0 auto 18px; color:var(--muted); }
+.square-booking .button { display:inline-flex; justify-content:center; margin-bottom:12px; }
+.cta .square-booking .booking-provider { margin:0; font-size:.78rem; }
+@media(max-width:600px) { .square-booking { padding:24px 20px; } .square-booking .button { width:100%; } }
 .faq-care-link { max-width:760px; margin:28px auto 0; text-align:center; color:var(--muted); }
 .faq-care-link a { display:inline-block; min-height:44px; padding-block:10px; color:var(--gold-text); }
 
@@ -453,7 +459,8 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 }
 </script>
 <link rel="stylesheet" href="/site-consent.css">
-<script src="/site-config.js?v=1516526650496709" defer></script>
+<script src="/site-config.js?v=20261027-square" defer></script>
+<script src="/site-booking.js" defer></script>
 <script src="/site-consent.js" defer></script>
 <meta name="google-site-verification" content="4_863m6T-bkobBhpuapn2KtRr-xYQyKWSOaQhmbsUP0">
 </head>
@@ -508,7 +515,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
       <details><summary>How long should I keep my braids in?</summary><p>The right wear time depends on your style, hair and scalp. Plan to remove braids within six weeks, or sooner if they pull or cause discomfort. <a href="/braid-care#how-long">Read our guide to braid wear time</a>.</p></details>
       <details><summary>Can I wash my hair while it is braided?</summary><p>Yes. Keep your scalp and natural hair clean with gentle washing, thorough rinsing and careful drying. The right routine depends on your scalp and the products you use. <a href="/braid-care#washing">See our washing and drying tips</a>.</p></details>
       <details><summary>How should I protect my braids at night?</summary><p>Gather them loosely and use a comfortable satin or silk bonnet, scarf or pillowcase. Avoid pulling your hairline with a tight tie or covering. <a href="/braid-care#sleeping">Read our bedtime care tips</a>.</p></details></div><p class="faq-care-link">A little care between appointments. <a href="/braid-care">Read the full braid care guide</a></p></section>
-<section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout"><div class="enquiry-intro"><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Tell us about your next look.</h2><p>Share your style and preferred date. We’ll contact you by phone to discuss your appointment.</p></div><form id="enquiry-form" class="enquiry-card" aria-label="Appointment enquiry" action="https://formsubmit.co/tuzifanekedrendeles@gmail.com" method="POST" enctype="multipart/form-data">
+<section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout"><div class="enquiry-intro"><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Tell us about your next look.</h2><p>Share your style and preferred date. We’ll contact you by phone to discuss your appointment.</p></div><div id="square-booking" class="square-booking" aria-labelledby="square-booking-title" hidden><h3 id="square-booking-title">Request an appointment</h3><p>Choose a service and preferred time in our booking calendar. We’ll confirm your appointment once we have agreed the style, price and location. For a quote first, use the enquiry form below.</p><a id="square-booking-link" class="button">View booking calendar</a><p class="booking-provider">Online booking is provided by Square. <a href="https://squareup.com/gb/en/legal/general/privacy" target="_blank" rel="noopener noreferrer">Square privacy information</a></p></div><form id="enquiry-form" class="enquiry-card" aria-label="Appointment enquiry" action="https://formsubmit.co/tuzifanekedrendeles@gmail.com" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Tress Braid Styles — Appointment enquiry">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://tressbraidstyles.co.uk/thank-you.html">
