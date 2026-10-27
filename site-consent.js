@@ -126,7 +126,7 @@
     const link = event.target.closest('a[href]');
     if (!link || event.defaultPrevented) return;
     const target = new URL(link.href, location.href);
-    if (['www.facebook.com', 'facebook.com', 'www.instagram.com', 'instagram.com'].includes(target.hostname)) track('Contact', { content_name: target.hostname.includes('instagram') ? 'Instagram' : 'Facebook' });
+    if (['www.facebook.com', 'facebook.com', 'm.me', 'www.instagram.com', 'instagram.com'].includes(target.hostname)) track('Contact', { content_name: target.hostname.includes('instagram') ? 'Instagram' : 'Facebook' });
   });
   // Opening a prepared message is a Contact event, never proof of a sent message.
   document.addEventListener('tress:whatsapp-enquiry', () => track('Contact', { content_name: 'WhatsApp enquiry' }));
