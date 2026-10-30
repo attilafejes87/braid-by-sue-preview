@@ -415,6 +415,18 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
   .hero-socials .secondary-link { white-space:nowrap; font-size:.95rem; }
   .hero-social-prefix { display:none; }
 }
+
+/* Static service-area guide. */
+.area-grid { align-items:center; gap:48px; }
+.area-copy { min-width:0; }
+.area-copy h2 { font-size:clamp(2.3rem,3.5vw,3.4rem); }
+.area-copy .area-note { margin-top:24px; font-size:.9rem; }
+.service-area-map { min-width:0; margin:0; padding:26px 24px 24px; border:1px solid var(--line); border-radius:22px; background:var(--paper); }
+.area-map-label { color:var(--gold-text); font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.service-area-map svg { display:block; width:100%; height:auto; margin:16px 0 0; }
+.service-area-map figcaption { text-align:center; color:var(--ink); font-size:.9rem; }
+.service-area-map figcaption span { display:block; margin-top:7px; color:var(--muted); font-size:.75rem; }
+@media(max-width:800px) { .area-grid { gap:28px; } .service-area-map { padding:22px 16px; } }
 </style>
 
 <title>Hair Braiding in Newmarket | Tress Braid Styles</title>
@@ -539,8 +551,21 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 <section id="about" class="section wrap" aria-labelledby="about-title"><div class="section-head"><div class="eyebrow">Meet your braider</div><h2 id="about-title">Braiding with a personal touch.</h2><p>We create braids in Newmarket and surrounding areas. Share a style you love or ask for help choosing your look. You’ll agree the style, extensions and appointment details together before booking.</p></div></section>
 <section id="experience" class="section experience" aria-labelledby="experience-title"><div class="experience-grid wrap"><div class="experience-copy"><div class="eyebrow">How to book</div><h2 id="experience-title">A style starts with an idea.</h2><p>Tell us what you have in mind. We’ll discuss the options and quote before you agree on an appointment.</p></div><div class="steps"><div class="step"><strong>Share your idea</strong><p>Browse services and prices in our booking calendar. For a personalised quote first, send your style photo and postcode on WhatsApp.</p></div><div class="step"><strong>Agree the details</strong><p>Discuss the price, location, time needed and extensions.</p></div><div class="step"><strong>Get ready</strong><p>Once we confirm your appointment, have your hair washed, detangled and blow-dried before it begins.</p></div></div></div></section>
     <section id="area" class="section area" aria-labelledby="area-title"><div class="area-grid wrap">
-      <div><div class="eyebrow">A little closer to you</div><h2 id="area-title">Newmarket &amp; beyond.</h2><p>Based in Newmarket, with enquiries welcome from the surrounding 20–25 miles. Share your town or village so we can discuss the appointment location with you.</p></div>
-      <div class="area-details"><p>Farther away? You are welcome to enquire. Agree the location and any travel arrangements with us before booking.</p></div>
+      <div class="area-copy"><div class="eyebrow">A little closer to you</div><h2 id="area-title">Cambridge, Newmarket &amp; Bury St Edmunds.</h2><p>Hair braiding appointments across Cambridge, Newmarket, Bury St Edmunds and surrounding towns and villages.</p><p>Send your postcode so we can confirm availability, the appointment location and any travel arrangements before booking.</p><p class="area-note">A little farther away? You’re welcome to ask.</p></div>
+      <figure class="service-area-map"><div class="area-map-label">Our local service area</div>
+        <svg viewBox="0 0 520 330" role="img" aria-labelledby="area-map-title area-map-description" xmlns="http://www.w3.org/2000/svg">
+          <title id="area-map-title">Cambridge, Newmarket, Bury St Edmunds and surrounding areas</title>
+          <desc id="area-map-description">An illustrative static area guide showing Cambridge to the southwest, Newmarket in the middle and Bury St Edmunds to the northeast. Appointment locations are agreed individually.</desc>
+          <defs><linearGradient id="area-map-wash" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#ead7aa" stop-opacity=".65"/><stop offset="1" stop-color="#ead7aa" stop-opacity=".25"/></linearGradient></defs>
+          <path d="M20 240C22 188 90 175 126 146S191 71 260 87 350 25 417 39 506 97 493 143 424 159 393 195 306 277 246 257 169 318 101 306 22 288 20 240Z" fill="url(#area-map-wash)"/>
+          <path d="M26 134C98 170 126 116 197 128S301 155 349 111 449 102 501 78M44 296C114 255 140 276 194 227S308 241 343 186 431 210 487 161" fill="none" stroke="#dfd2bb" stroke-width="1.5"/>
+          <path d="M90 240C153 234 182 169 250 166S352 108 421 94" fill="none" stroke="#b68c45" stroke-width="2.5" stroke-dasharray="5 7" stroke-linecap="round"/>
+          <g fill="#c5a05b" fill-opacity=".2"><circle cx="90" cy="240" r="20"/><circle cx="250" cy="166" r="20"/><circle cx="421" cy="94" r="20"/></g>
+          <g fill="#78582b" stroke="#fffdf8" stroke-width="4"><circle cx="90" cy="240" r="8"/><circle cx="250" cy="166" r="8"/><circle cx="421" cy="94" r="8"/></g>
+          <g fill="#35291f" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="middle"><text x="90" y="282">Cambridge</text><text x="250" y="207">Newmarket</text><text x="421" y="38"><tspan x="421">Bury St</tspan><tspan x="421" dy="25">Edmunds</tspan></text></g>
+        </svg>
+        <figcaption>And the surrounding towns &amp; villages.<span>Illustrative area guide · Location agreed when booking.</span></figcaption>
+      </figure>
     </div></section>
     <section id="faq" class="section wrap" aria-labelledby="faq-title"><div class="section-head"><div class="eyebrow">Before you enquire</div><h2 id="faq-title">A few helpful answers</h2></div><div class="faq">
       <details><summary>Who are appointments for?</summary><p>We welcome adults and children. Parents are welcome to ask us about a suitable style when enquiring.</p></details>
