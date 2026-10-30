@@ -20,7 +20,7 @@
   const product = products[query.get('product')];
   const style = styles[query.get('style')];
   const selection = product || wig;
-  let message = 'Hi Tress Braid Styles, I’d like a personalised quote. I’ll send my style photo and postcode.';
+  let message = 'Hi Tress Braid Styles, could you help me choose the right service to book? I’ll send a style photo.';
   if (selection) {
     const title = product ? 'Let’s talk haircare.' : 'Let’s find your next wig.';
     document.getElementById('booking-title').textContent = title;
@@ -36,7 +36,7 @@
     document.getElementById('booking-enquiry-note').textContent = 'An enquiry is not an order. We’ll confirm the exact item, total price and any delivery or collection arrangements before you pay.';
   } else if (style) {
     document.getElementById('booking-title').textContent = 'Let’s plan your ' + style.toLowerCase() + '.';
-    message = 'Hi Tress Braid Styles, I’d like a quote for ' + style.toLowerCase() + '. I’ll send my style photo and postcode.';
+    message = 'Hi Tress Braid Styles, I’d like help choosing a service for ' + style.toLowerCase() + '. I’ll send a style photo.';
   }
   const chat = new URL('https://wa.me/447901368390');
   chat.searchParams.set('text', message);
