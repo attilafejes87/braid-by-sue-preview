@@ -441,6 +441,32 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .area-page-links > span { flex-basis:100%; color:var(--muted); font-size:.85rem; }
 .area-page-links a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:9px 16px; border:1px solid var(--gold); border-radius:999px; background:var(--paper); color:var(--gold-text); font-size:.9rem; font-weight:700; text-decoration:none; }
 .area-page-links a:hover { background:var(--gold-light); }
+
+/* Full-width section tones and compact spacing for the braiding homepage. */
+main > .work-gallery,
+main > .braid-services,
+main > #about,
+main > #area,
+main > #faq { padding-block:clamp(48px,5vw,64px); }
+main > .hero,
+main > .braid-services,
+main > #about,
+main > #faq { background:var(--paper); }
+main > .work-gallery,
+main > #area { background:var(--beige); }
+main > #booking > .cta-inner { padding-block:clamp(48px,5vw,64px); }
+#about .section-head { margin-bottom:0; }
+#about .section-head p { margin-bottom:0; }
+#faq .section-head { margin-bottom:28px; }
+@media(max-width:800px) {
+  main > .work-gallery,
+  main > .braid-services,
+  main > #about,
+  main > #area,
+  main > #faq { padding-block:36px; }
+  main > #booking > .cta-inner { padding-block:40px; }
+  #faq .section-head { margin-bottom:20px; }
+}
 </style>
 
 <title>Hair Braiding in Cambridge &amp; Newmarket | Tress Braid Styles</title>
@@ -588,7 +614,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
       <div class="hero-copy"><p class="hero-location-line">Serving <span>Cambridge,</span> <span>Newmarket,</span> <span>Bury St Edmunds,</span> <span>Ely,</span> <span>Mildenhall</span> and <span>Thetford</span> <span>— plus nearby towns and villages.</span></p><h1>Beautiful braids.<em>Made for you.</em></h1><p class="lead">Protective styles with a personal touch, for adults and children.</p><div class="hero-actions"><a class="button" href="#booking">Book an appointment</a><div class="hero-socials"><a class="secondary-link facebook-inline" href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span> <span><span class="hero-social-prefix">Follow us on </span>Facebook</span></a><a class="secondary-link instagram-inline" href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span> <span><span class="hero-social-prefix">Follow us on </span>Instagram</span></a></div></div></div>
       <div class="hero-feature"><img src="hero-ai-braids.webp" width="1086" height="1448" alt="AI-generated style inspiration showing long dark braids with warm highlights" fetchpriority="high" decoding="async"></div>
     </div></section>
-<section class="work-gallery wrap" aria-label="Explore our work">
+<section class="work-gallery" aria-label="Explore our work"><div class="wrap">
       <div id="portfolio" class="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Hairstyle photographs">
         <p id="carousel-help" class="carousel-help">Explore our work <span>Swipe to explore →</span></p>
         <div id="hero-photo-track" class="carousel-track" tabindex="0" aria-label="Hairstyle photographs" aria-describedby="carousel-help">
@@ -604,14 +630,14 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
         </div>
         <p id="carousel-position" class="carousel-position" role="status" aria-live="polite" hidden>Photo 1 of 4</p>
       </div>
-    </section>
-<section id="braid-services" class="braid-services wrap" aria-labelledby="braid-services-title"><div class="eyebrow">Find your braided look</div><h2 id="braid-services-title">A style with you in mind.</h2><div class="braid-service-grid"><article class="braid-service-card"><h3>Knotless braids</h3><p>Discuss braid size, length, colour and extensions for your own look.</p><a href="/knotless-braids-newmarket">Explore knotless braids</a></article><article class="braid-service-card"><h3>Cornrows &amp; feed-in braids</h3><p>Share your row pattern and ask about natural-hair or feed-in styles.</p><a href="/cornrows-newmarket">Explore cornrows &amp; feed-in braids</a></article><article class="braid-service-card"><h3>Children’s braids</h3><p>Plan a child’s style, preparation and appointment with a parent or guardian.</p><a href="/childrens-braids-newmarket">Explore children’s braids</a></article></div></section>
+    </div></section>
+<section id="braid-services" class="braid-services" aria-labelledby="braid-services-title"><div class="wrap"><div class="eyebrow">Find your braided look</div><h2 id="braid-services-title">A style with you in mind.</h2><div class="braid-service-grid"><article class="braid-service-card"><h3>Knotless braids</h3><p>Discuss braid size, length, colour and extensions for your own look.</p><a href="/knotless-braids-newmarket">Explore knotless braids</a></article><article class="braid-service-card"><h3>Cornrows &amp; feed-in braids</h3><p>Share your row pattern and ask about natural-hair or feed-in styles.</p><a href="/cornrows-newmarket">Explore cornrows &amp; feed-in braids</a></article><article class="braid-service-card"><h3>Children’s braids</h3><p>Plan a child’s style, preparation and appointment with a parent or guardian.</p><a href="/childrens-braids-newmarket">Explore children’s braids</a></article></div></div></section>
 <section id="booking" class="cta" aria-labelledby="booking-title"><div class="cta-inner wrap enquiry-layout">
   <div class="enquiry-intro"><div class="eyebrow">Your next look starts here</div><h2 id="booking-title">Book your next look.</h2><p>Browse our services and prices, then request a time in our booking calendar.</p></div>
   <div id="square-booking" class="square-booking" aria-labelledby="square-booking-title"><span class="booking-calendar-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18m-13 5 3 3 5-5"/></svg></span><h3 id="square-booking-title">Request an appointment</h3><p>Select your style, size and length to see the price and request your preferred time. We’ll confirm your appointment and location.</p><a id="square-booking-link" class="button" href="https://squareup.com/appointments/book/L8SFJ10GG1WTJ">View services &amp; book</a><p class="booking-provider">Online booking is provided by Square. <a href="https://squareup.com/gb/en/legal/general/privacy" target="_blank" rel="noopener noreferrer">Square privacy information</a></p><details class="booking-preparation"><summary>How to prepare for your appointment</summary><p>Once we confirm your appointment, please have your hair washed, detangled and blow-dried before it begins.</p></details></div>
   <div class="booking-enquiry" aria-labelledby="booking-enquiry-title"><h3 id="booking-enquiry-title">Need help choosing a style?</h3><p id="booking-enquiry-copy">Send a style photo and we’ll help you find the right service to book.</p><p id="booking-selection" class="wig-choice" hidden></p><a id="whatsapp-enquiry-link" class="button" href="https://wa.me/447901368390"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.4-1.7a12 12 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.6-8.4ZM12.2 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.2-1.4-.8-.7-1.3-1.5-1.5-1.8-.1-.3 0-.4.1-.5l.4-.5.3-.4c.1-.1 0-.3 0-.4l-.9-2.1c-.2-.6-.5-.5-.6-.5h-.6c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.2 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.4 1.6.5.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg><span>Message on WhatsApp</span></a><p id="booking-enquiry-note">For appointments and prices, use the booking calendar above.</p><p class="booking-privacy"><a href="/privacy">Privacy &amp; cookies</a></p></div>
 </div></section>
-<section id="about" class="section wrap" aria-labelledby="about-title"><div class="section-head"><div class="eyebrow">Meet your braider</div><h2 id="about-title">Braiding with a personal touch.</h2><p>We create braids in Cambridge, Newmarket, Bury St Edmunds, Ely, Mildenhall, Thetford and surrounding towns and villages. Share a style you love or ask for help choosing your look. You’ll agree the style, extensions and appointment details together before booking.</p></div></section>
+<section id="about" class="section" aria-labelledby="about-title"><div class="wrap"><div class="section-head"><div class="eyebrow">Meet your braider</div><h2 id="about-title">Braiding with a personal touch.</h2><p>We create braids in Cambridge, Newmarket, Bury St Edmunds, Ely, Mildenhall, Thetford and surrounding towns and villages. Share a style you love or ask for help choosing your look. You’ll agree the style, extensions and appointment details together before booking.</p></div></div></section>
 <section id="area" class="section area" aria-labelledby="area-title"><div class="area-grid wrap">
       <div class="area-copy"><div class="eyebrow">A little closer to you</div><h2 id="area-title">Our local area.</h2><p>Hair braiding appointments across Cambridge, Newmarket, Bury St Edmunds, Ely, Mildenhall, Thetford and surrounding towns and villages.</p><p>Send your postcode so we can confirm availability, the appointment location and any travel arrangements before booking.</p><nav class="area-page-links" aria-label="Local braiding guides"><span>Styles &amp; booking by area</span><a href="/hair-braiding-cambridge">Cambridge</a><a href="/hair-braiding-newmarket">Newmarket</a><a href="/hair-braiding-bury-st-edmunds">Bury St Edmunds</a></nav><p class="area-note">A little farther away? You’re welcome to ask.</p></div>
       <figure class="service-area-map"><div class="area-map-label">Our local service area</div>
@@ -628,7 +654,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
         <figcaption>And the surrounding towns &amp; villages.</figcaption>
       </figure>
     </div></section>
-<section id="faq" class="section wrap" aria-labelledby="faq-title"><div class="section-head"><div class="eyebrow">Before you enquire</div><h2 id="faq-title">A few helpful answers</h2></div><div class="faq">
+<section id="faq" class="section" aria-labelledby="faq-title"><div class="wrap"><div class="section-head"><div class="eyebrow">Before you enquire</div><h2 id="faq-title">A few helpful answers</h2></div><div class="faq">
       <details><summary>Who are appointments for?</summary><p>We welcome adults and children. Parents are welcome to ask us about a suitable style when enquiring.</p></details>
       <details><summary>Does an enquiry confirm my appointment?</summary><p>No. Appointments are arranged individually. Wait for us to confirm availability and the booking details.</p></details>
       <details><summary>How much will my braids cost?</summary><p>Our booking calendar shows prices for each style, size and length. For a custom style or extensions, ask us to confirm the total price before booking.</p></details>
@@ -637,7 +663,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
     
       <details><summary>How long should I keep my braids in?</summary><p>The right wear time depends on your style, hair and scalp. Plan to remove braids within six weeks, or sooner if they pull or cause discomfort. <a href="/braid-care#how-long">Read our guide to braid wear time</a>.</p></details>
       <details><summary>Can I wash my hair while it is braided?</summary><p>Yes. Keep your scalp and natural hair clean with gentle washing, thorough rinsing and careful drying. The right routine depends on your scalp and the products you use. <a href="/braid-care#washing">See our washing and drying tips</a>.</p></details>
-      <details><summary>How should I protect my braids at night?</summary><p>Gather them loosely and use a comfortable satin or silk bonnet, scarf or pillowcase. Avoid pulling your hairline with a tight tie or covering. <a href="/braid-care#sleeping">Read our bedtime care tips</a>.</p></details></div><p class="faq-care-link">A little care between appointments. <a href="/braid-care">Read the full braid care guide</a></p></section>
+      <details><summary>How should I protect my braids at night?</summary><p>Gather them loosely and use a comfortable satin or silk bonnet, scarf or pillowcase. Avoid pulling your hairline with a tight tie or covering. <a href="/braid-care#sleeping">Read our bedtime care tips</a>.</p></details></div><p class="faq-care-link">A little care between appointments. <a href="/braid-care">Read the full braid care guide</a></p></div></section>
 </main>
   <footer class="footer"><div class="footer-grid wrap"><div><div class="footer-brand">Tress Braid Styles</div><p>Protective styles, beautifully personal.</p><p class="footer-location">Cambridge · Newmarket · Bury St Edmunds<br>Ely · Mildenhall · Thetford<br>&amp; surrounding towns and villages<br>By appointment</p></div><div class="footer-sections"><div class="footer-group"><h2>Explore</h2><div class="footer-group-links"><a href="/#braid-services">Braiding services</a><a href="/braid-care">Braid care</a><a href="#booking">Book an appointment</a><a href="/privacy">Privacy &amp; cookies</a></div></div><div class="footer-group"><h2>Follow us</h2><div class="footer-group-links"><a href="https://www.facebook.com/tressbraidstyles" target="_blank" rel="noopener noreferrer"><span class="facebook-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path d="M13.5 24V14h3l.45-3.5H13.5V8.3c0-1 .3-1.7 1.75-1.7h1.9V3.5c-.33-.05-1.46-.14-2.78-.14-2.75 0-4.63 1.68-4.63 4.76v2.38H6.65V14h3.09v10h3.76Z" fill="#fff"/></svg></span><span>Facebook</span></a><a href="https://www.instagram.com/tress_braidstyles/" target="_blank" rel="noopener noreferrer"><span class="instagram-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span><span>Instagram</span></a></div></div></div></footer>
 <script>
