@@ -467,6 +467,18 @@ main > #booking > .cta-inner { padding-block:clamp(48px,5vw,64px); }
   main > #booking > .cta-inner { padding-block:40px; }
   #faq .section-head { margin-bottom:20px; }
 }
+
+/* Keep all three local-area choices together on one row. */
+.area-page-links { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.45fr); max-width:480px; }
+.area-page-links > span { grid-column:1 / -1; }
+.area-page-links a { min-width:0; padding-inline:8px; white-space:nowrap; }
+@media(max-width:1100px) {
+  .area-page-links { gap:6px; }
+  .area-page-links a { padding-inline:4px; font-size:.8rem; }
+}
+@media(max-width:600px) {
+  .area-page-links a { font-size:clamp(.75rem,3.2vw,.875rem); letter-spacing:-.01em; }
+}
 </style>
 
 <title>Hair Braiding in Cambridge &amp; Newmarket | Tress Braid Styles</title>
