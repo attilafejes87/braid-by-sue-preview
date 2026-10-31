@@ -491,10 +491,10 @@ main > #booking > .cta-inner { padding-block:clamp(48px,5vw,64px); }
 .review-card blockquote p { margin:0; font:400 1.35rem/1.5 Georgia,'Times New Roman',serif; }
 @media(max-width:800px) {
   .client-reviews { padding-block:36px; }
-  .review-grid { grid-template-columns:1fr; gap:10px; }
-  .review-card { padding:16px; border-radius:14px; }
-  .review-stars { margin-bottom:8px; font-size:1rem; }
-  .review-card blockquote p { font-size:1.05rem; line-height:1.4; }
+  .review-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
+  .review-card { padding:12px 8px; border-radius:12px; }
+  .review-stars { margin-bottom:8px; font-size:.75rem; letter-spacing:0; white-space:nowrap; }
+  .review-card blockquote p { font-size:clamp(.75rem,3.2vw,1rem); line-height:1.4; overflow-wrap:anywhere; }
   .client-reviews .section-head { margin-bottom:24px; }
 }
 </style>
